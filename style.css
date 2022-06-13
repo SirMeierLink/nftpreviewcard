@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* Primary colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Neutral Colorrs */
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue-main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title {
+    font-size: 20px;
+    margin: 20px 0 20px;
+    font-weight: 600;
+}
+
+.info p:first-child,
+.creator .cyan-hover {
+    color: #fff;
+}
+
+.info p:last-child {
+    margin-bottom: 20px;
+}
+
+.info p:last-child,
+.eth-info .days-left,
+.creator .soft-blue {
+    color: var(--soft-blue);
+}
+
+.info p:last-child {
+    font-size: 15px;
+}
+
+.card {
+    background-color: var(--very-dark-blue-card-bg);
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img[alt=equilibrium] {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+.eth-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--very-dark-blue-line);
+    font-size: 12px;
+    position: relative;
+}
+
+.eth-info .cyan {
+    color: var(--cyan);
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+}
+
+.creator p {
+    font-size: 15px;
+}
+
+img[alt=avatar] {
+    margin-right: 10px;
+    width: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+img[alt=clock],
+img[alt=icon-ethereum] {
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+
+/* Hover states */
+.info .title:hover,
+.creator .cyan-hover:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.icon-view {
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-view:hover::before {
+    position: absolute;
+    content: url('./images/icon-view.svg');
+    width: 100%;
+    height: 260px;
+    background-color: hsla(178, 100%, 50%, 0.4);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
